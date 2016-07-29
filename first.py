@@ -1,4 +1,6 @@
-﻿#http://www.runoob.com/python/python-lists.html
+# -*- coding: UTF-8 -*-
+
+#http://www.runoob.com/python/python-lists.html
 
 print("你好，中文Python")
 
@@ -103,3 +105,45 @@ list3.sort()
 list3.reverse()
 print("After deleting value at index 2 and change the value at index 3 to 2001: ")
 for x in list3: print(x)
+list3.pop()
+list3.remove(888)
+print(list3)
+print(len(list3))
+
+print('\n==========tuple==========')
+tuple1, tuple2 = (123, 'xyz'), (456, 'abc')
+print(testdic,'tuple(testdic):',tuple(testdic))
+
+print('\n==========dic==========')
+tdict = {'name': 'Zara', 'age': 7}
+print('Variable Type : {0},{1},{2}'.format(type(tdict),type(list3),type(str1)))
+seq = ('name', 'age', 'sex')
+dict = dict.fromkeys(seq, 10)
+print(dict)
+#print(dict.items())
+dict.update(tdict)
+print(dict)
+
+print('\n==========date time==========')
+import time
+print('当前时间:',time.asctime( time.localtime() ))
+print('当前时间是:',time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
+import calendar
+print(calendar.month(2016, 1))
+
+print('\n==========function==========')
+def testfun(str):
+	print(str)
+	return str+'.nothing'
+print(testfun('test'))
+def printinfo( arg1, *vartuple ):
+   "打印任何传入的参数"
+   print("输出: ",arg1)
+   for var in vartuple:
+      print(var)
+   return
+# 调用printinfo 函数
+printinfo( 10 );
+printinfo( 70, 60, 50 );
+sum = lambda arg1, arg2: arg1 + arg2;
+print("相加后的值为 : ", sum( 10, 20 ))
