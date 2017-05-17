@@ -21,12 +21,7 @@ with open(filename, 'r+') as target_file:
     line3 = raw_input("line 3:")
 
     print "Writing these content to file: %s" % filename
-    target_file.write(line1)
-    target_file.write("\n")
-    target_file.write(line2)
-    target_file.write("\n")
-    target_file.write(line3)
-    target_file.write("\n")
+    target_file.write("%s\n%s\n%s" % (line1,line2,line3))
 
     target_file.flush()
 
@@ -39,5 +34,5 @@ with open(filename, 'r+') as target_file:
     for line in target_file.readlines():
         print line
 
-    print "And finally, we close the file."
+print "And finally, we close the file."
 target_file.close()
